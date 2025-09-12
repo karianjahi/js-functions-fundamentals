@@ -22,10 +22,10 @@ function maskEmail(email) {
         return "Error: Email must be a single string"
     }
     let splits = email.split("@");
-    let userName = splits[0];
-    let domainName = splits[1];
+    let userName = splits[0]; // first part of the split has the username
+    let domainName = splits[1]; // second or last part of the email has the domain name
     let userNameLength = userName.length;
-    let firstLetter = userName[0];
+    let firstLetter = userName[0]; // First character of the username
     let lastLetter = userName[userNameLength - 1];
     let single_asterisk = "*";
     let nasterisks = userNameLength - 2;
