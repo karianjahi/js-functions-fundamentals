@@ -36,3 +36,9 @@ function maskEmail(email) {
 
 let email = "apple.pie@example.com"
 maskEmail(email);
+
+
+
+function loanQualificationChecker() {
+
+}
