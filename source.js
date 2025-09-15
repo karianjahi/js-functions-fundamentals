@@ -165,6 +165,30 @@ const isLeapYear = (possibleLeapYear) => {
     }
 }
 
-let year = 1900;
-let result = isLeapYear(year);
-console.log(result);
+// let year = 1900;
+// let result = isLeapYear(year);
+// console.log(result);
+
+
+/*
+Truncating algorithm. We need a function that can
+truncate a string to a certain length.
+The function takes two arguments, arg1 which is a string and arg2 which is a number
+If arg1 is longer that the number given (arg2), we truncate the string to that number.
+"..." should also be appended at the end of the truncated string to show truncation.
+The string remains unchanged if the length of arg1 is less than or equal to the number given.
+*/
+const truncateString = (arg1, arg2) => {
+    let argLength = arg1.length
+    if (argLength > arg2) {
+        let newString = arg1.slice(0, arg2);
+        // console.log(`${arg1} has a length of ${argLength}. Should truncate to ${arg2} numbers. The new string should be ${newString}`);
+        return `${newString}...`
+    } 
+    return arg1;
+}
+
+let arg1 = "A-tisket a-tasket A green and yellow basket";
+let arg2 = 8;
+
+console.log(truncateString(arg1, arg2));
