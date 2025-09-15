@@ -188,7 +188,29 @@ const truncateString = (arg1, arg2) => {
     return arg1;
 }
 
-let arg1 = "A-tisket a-tasket A green and yellow basket";
-let arg2 = 8;
+// let arg1 = "A-tisket a-tasket A green and yellow basket";
+// let arg2 = 8;
 
-console.log(truncateString(arg1, arg2));
+// console.log(truncateString(arg1, arg2));
+
+
+/*
+Aim is to build a function that checks if a string ends with the target string
+*/
+
+const confirmEnding = (stringToCheck, subString) => {
+
+    // get the length of substring 
+    let lenSubstring = subString.length
+
+    // Now capture the last lenSubstring characters from the string
+    let charsFromLast = stringToCheck.slice(-lenSubstring);
+
+    // return true if these are equal to the subString
+    return charsFromLast === subString;
+
+}
+
+let arg1 = "Abstraction"
+let arg2 = "action"
+console.log(confirmEnding(arg1, arg2));
