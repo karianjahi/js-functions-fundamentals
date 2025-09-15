@@ -203,7 +203,7 @@ const confirmEnding = (stringToCheck, subString) => {
     // get the length of substring 
     let lenSubstring = subString.length
 
-    // Now capture the last lenSubstring characters from the string
+    // Now capture the last lenSubstring characters from the main string
     let charsFromLast = stringToCheck.slice(-lenSubstring);
 
     // return true if these are equal to the subString
@@ -211,6 +211,6 @@ const confirmEnding = (stringToCheck, subString) => {
 
 }
 
-let arg1 = "Abstraction"
-let arg2 = "action"
-console.log(confirmEnding(arg1, arg2));
+// let arg1 = "Abstraction"
+// let arg2 = "action"
+// console.log(confirmEnding(arg1, arg2));
