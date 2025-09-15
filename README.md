@@ -9,7 +9,8 @@ This project is meant for **practice, learning, and fun** 🎉 — not productio
 ## 📂 Project Structure
 
 ```bash
-js-utility-kit/
+js-functions-fundamentals
+/
 ├── .gitignore
 ├── LICENSE # MIT License
 ├── README.md # Project documentation
