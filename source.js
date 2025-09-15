@@ -34,8 +34,8 @@ function maskEmail(email) {
     return maskedEmail
 }
 
-let email = "apple.pie@example.com"
-maskEmail(email);
+// let email = "apple.pie@example.com"
+// maskEmail(email);
 
 
 /*
@@ -49,12 +49,12 @@ We are building a loan qualification checker app.
 The app will check whether the user is eligible for a duplex, car, and condo loan based on their annual income and credit score. A credit score is a number that represents how good you are at managing borrowed money.
 */
 
-const minIncomeForDuplex = 60000;
-const minCreditScoreForDuplex = 700;
-const minIncomeForCondo = 45000;
-const minCreditScoreForCondo = 680;
-const minIncomeForCar = 30000;
-const minCreditScoreForCar = 650;
+// const minIncomeForDuplex = 60000;
+// const minCreditScoreForDuplex = 700;
+// const minIncomeForCondo = 45000;
+// const minCreditScoreForCondo = 680;
+// const minIncomeForCar = 30000;
+// const minCreditScoreForCar = 650;
 
 // function getLoanMessage(annualIncome, creditScore) {
 //     // Is the user eligible for duplex loan?
@@ -81,15 +81,90 @@ function getLoanMessage(annualIncome, creditScore) {
 }
 
 //testing out the function
-let duplexLoanMsg;
-duplexLoanMsg = getLoanMessage(85000, 850);
-console.log(duplexLoanMsg);
-let condoLoanMsg;
-condoLoanMsg = getLoanMessage(65000, 690);
-console.log(condoLoanMsg);
-let carLoanMsg;
-carLoanMsg = getLoanMessage(45000, 660);
-console.log(carLoanMsg);
-let noLoanMsg;
-noLoanMsg = getLoanMessage(25000, 550);
-console.log(noLoanMsg);
+// let duplexLoanMsg;
+// duplexLoanMsg = getLoanMessage(85000, 850);
+// console.log(duplexLoanMsg);
+// let condoLoanMsg;
+// condoLoanMsg = getLoanMessage(65000, 690);
+// console.log(condoLoanMsg);
+// let carLoanMsg;
+// carLoanMsg = getLoanMessage(45000, 660);
+// console.log(carLoanMsg);
+// let noLoanMsg;
+// noLoanMsg = getLoanMessage(25000, 550);
+// console.log(noLoanMsg);
+
+
+/*
+Building a Celcius to Fahrenheit Converter
+The main purpose is to write a function that converts the temperature from Celcius to Fahrenheit
+f = 9/5c + 32
+*/
+
+const convertCtoF = (tempC) => {
+    let tempK;
+    tempK = 9/5 * tempC + 32;
+    return tempK
+}
+
+// console.log(convertCtoF(0));
+// console.log(convertCtoF(-30));
+// console.log(convertCtoF(-10));
+// console.log(convertCtoF(0));
+// console.log(convertCtoF(20));
+// console.log(convertCtoF(30));
+
+
+
+/*
+Building a card counting assistant
+We want to use javascript to count dealt cards
+*/
+
+let count = 0;
+
+const cc = (card) => {
+    if (card >=2 && card <=10) {
+        card = Number(card);
+        if(card < 7){
+            count += 1
+        }
+
+        if (card === 10){
+            count -= 1
+        }
+    } else {
+        card = String(card);
+        if (card === "J" || card ==="Q" || card === "K" || card === "A") {
+            count -= 1
+        }
+    }
+    let bet;
+    if (count > 0) {
+        bet = "Bet"
+    } else {
+        bet = "Hold"
+    }
+    return `${count.toString()} ${bet}`;
+}
+
+// console.log(cc("5"));
+
+/*
+Building a leap year calculator
+A leap year is a year that is divisible by 4 except for years
+that are divisible by 100 and not divisible by 400. 
+*/
+const isLeapYear = (possibleLeapYear) => {
+    if (possibleLeapYear % 4 > 0) {
+        return `${possibleLeapYear} is not a leap year.`
+    } else if (possibleLeapYear % 100 === 0 && possibleLeapYear % 400 > 0) {
+        return `${possibleLeapYear} is not a leap year.`
+    } else {
+        return `${possibleLeapYear} is a leap year.`
+    }
+}
+
+let year = 1900;
+let result = isLeapYear(year);
+console.log(result);
