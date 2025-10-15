@@ -108,7 +108,7 @@ Checks if a string ends with a given substring.
 ## 🚀 Getting Started
 1. Clone the repo:
 ```bash
-git clone https://github.com/<your-username>/js-utility-kit.git
+git clone https://github.com/karianjahi/js-utility-kit.git
 ```
 
 2. Navigate to the folder
